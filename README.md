@@ -4,7 +4,7 @@ Calls executed by the hyperevent #call do not return values ​​to the client.
 ![alt text](image.png)
 https://docs.intersystems.com/latest/csp/docbook/DocBook.UI.Page.cls?KEY=TCSP_HyperEvents
 
-# A brief explanation of how hypervents work...
+# A brief explanation of how hyperevents work...
 When compiling a CSP, Caché/IRIS identifies hyperevent calls and changes them to client-side request methods. For example, if there is a `#call` call on your page, after compilation, Caché/IRIS will change the `#call` call to the `cspCallHttpServerMethod` method. You can see this change in the root source code (the `.int` file).
 
 If we analyze the cspCallHttpServerMethod in cspxmlhttp.js, we can see that if the request is asynchronous (#call), the request is made, but the return will always be null.
