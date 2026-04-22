@@ -1,6 +1,9 @@
 # The problem...
 Calls executed by the hyperevent #call do not return values ​​to the client.
 
+![alt text](image.png)
+https://docs.intersystems.com/latest/csp/docbook/DocBook.UI.Page.cls?KEY=TCSP_HyperEvents
+
 # A brief explanation of how hypervents work...
 When compiling a CSP, Caché/IRIS identifies hyperevent calls and changes them to client-side request methods. For example, if there is a `#call` call on your page, after compilation, Caché/IRIS will change the `#call` call to the `cspCallHttpServerMethod` method. You can see this change in the root source code (the `.int` file).
 
