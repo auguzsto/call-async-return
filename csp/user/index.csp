@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return in call hyperevents</title>
+</head>
+<body>
+    A small fix to return asynchronous calls using hyperevent #call
+    <p><button onclick="handler()">Call</button></p>
+</body>
+</html>
+
+<async />
+<script type="text/javascript">
+    let handler = async () => {
+        let result = await #call(Events.WithReturn.Execute())#
+        alert(result)
+    }
+</script>
+<script src="fix_cspxmlhttp.js"></script>

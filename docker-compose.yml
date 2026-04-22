@@ -1,0 +1,9 @@
+services:
+  iris-call-async:
+    container_name: iris-call-async
+    init: true
+    image: intersystems/iris-community:latest-cd
+    ports:
+     - 52773:52773
+     - 1972:1972
+       
